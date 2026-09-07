@@ -9,6 +9,7 @@
   "featured": false,
   "period": "2026",
   "role": "企劃",
+  "cover": "/assets/images/00-cover.jpg",
   "blocks": [
     {
       "title": "蒔花序・365 覺醒卡",
@@ -17,7 +18,8 @@
     },
     {
       "title": "幸運語錄小工具",
-      "text": "透過每日抽卡，為自己加油打氣。\n語錄為我平常收集的內容，由Claude執行代碼，放置於Github顯示。\n為了產品化，並未將google sheet寫入代碼裡，使用者可載入自己的語錄集並嵌入。"
+      "text": "透過每日抽卡，為自己加油打氣。\n語錄為我平常收集的內容，由Claude執行代碼，放置於Github顯示。\n為了產品化，並未將google sheet寫入代碼裡，使用者可載入自己的語錄集並嵌入。",
+      "image": "/assets/images/02-quote.jpg"
     },
     {
       "title": "照片輪播小工具",
