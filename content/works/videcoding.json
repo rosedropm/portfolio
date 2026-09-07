@@ -21,7 +21,8 @@
     },
     {
       "title": "照片輪播小工具",
-      "text": "Notion尚未提供照片輪播的功能，此為可搭配自己cloudinary的倉庫做使用。"
+      "text": "Notion尚未提供照片輪播的功能，此為可搭配自己cloudinary的倉庫做使用。",
+      "image": "/assets/images/03-galley.jpg"
     }
   ],
   "gallery": [
