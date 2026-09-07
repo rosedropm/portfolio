@@ -52,8 +52,33 @@ def asset(path, prefix):
     assets.add(path)
     return prefix + quote(path, safe='/')
 
+def inline_links(text):
+    # Only explicit Markdown links; all other text remains escaped plain text.
+    pattern = r'\[([^\[\]\n]+)\]\((https?://(?:[^\s()]+|\([^\s()]*\))+)\)'
+    parts = []
+    end = 0
+    for match in re.finditer(pattern, text):
+        parts.append(E(text[end:match.start()]))
+        label, url = match.groups()
+        try:
+            parsed = urlsplit(url)
+            valid = (parsed.scheme in ('http', 'https') and bool(parsed.hostname)
+                     and not parsed.username and not parsed.password
+                     and not any(c in url for c in '<>"\\')
+                     and not any(ord(c) < 32 or ord(c) == 127 for c in url))
+            parsed.port  # Reject malformed ports.
+        except ValueError:
+            valid = False
+        if valid:
+            parts.append(f'<a class="inline-link" style="text-decoration:underline;text-underline-offset:.2em;overflow-wrap:anywhere" href="{E(url)}" target="_blank" rel="noopener noreferrer">{E(label)}<span class="sr-only">（另開分頁）</span></a>')
+        else:
+            parts.append(E(match.group(0)))
+        end = match.end()
+    parts.append(E(text[end:]))
+    return ''.join(parts)
+
 def paragraphs(text):
-    return ''.join('<p>'+E(p).replace('\n','<br>')+'</p>' for p in (text or '').split('\n\n') if p.strip())
+    return ''.join('<p>'+inline_links(p).replace('\n','<br>')+'</p>' for p in (text or '').split('\n\n') if p.strip())
 
 def image(path, alt, prefix, eager=False, cls=''):
     return f'<img src="{asset(path,prefix)}" alt="{E(alt)}" class="{cls}" loading="{"eager" if eager else "lazy"}" decoding="async"'+(' fetchpriority="high"' if eager else '')+'>'
@@ -254,6 +279,7 @@ for old in previous_files:
         if OUT in candidate.parents and candidate.is_file(): candidate.unlink()
 manifest_path.write_text(json.dumps(sorted(generated)), encoding='utf-8')
 print(f'Built {len(routes)+1} HTML pages and {len(assets)} assets into {OUT.name}.')
+
 
 
 
