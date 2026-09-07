@@ -213,7 +213,7 @@ def detail(item,group):
 
 def about():
     prefix='../'
-    body=f'''<section class="about-hero wrap"><div><p class="eyebrow">ABOUT ESTHER</p><h1>{E(site['about_title']).replace(chr(10),'<br>')}</h1><p class="about-name">{E(site['name'])} / {E(site['chinese_name'])}</p><p>{E(site['about_intro'])}</p></div><figure>{image(site['portrait'],site['portrait_alt'],prefix,True)}<figcaption>{E(site['location'])}</figcaption></figure></section>
+    body=f'''<section class="about-hero wrap"><div><p class="eyebrow">ABOUT ESTHER</p><h1>{E(site['about_title']).replace(chr(10),'<br>')}</h1><p class="about-name">{E(site['name'])}{(' / ' + E(site['chinese_name'])) if site.get('chinese_name') else ''}</p><p>{E(site['about_intro'])}</p></div><figure>{image(site['portrait'],site['portrait_alt'],prefix,True)}<figcaption>{E(site['location'])}</figcaption></figure></section>
     <section class="about-story narrow">{paragraphs(site['about_body'])}</section>
     <section class="section wrap">{section_head('WHAT I BRING','我的工作方式。')}<div class="skills-grid">{''.join(f'<article><span class="eyebrow">0{i+1}</span><h3>{E(s["title"])}</h3><p>{E(s["text"])}</p></article>' for i,s in enumerate(site.get('skills') or []))}</div></section>
     <section class="section wrap">{section_head('THE JOURNEY','從內容製作，到品牌整合。')}<div class="timeline">{''.join(f'<article><p class="eyebrow">{E(j["period"])}</p><div><h3>{E(j["company"])}</h3><p class="job-role">{E(j["role"])}</p><p>{E(j["text"])}</p></div></article>' for j in (site.get('experience') or []))}</div></section>
