@@ -9,10 +9,11 @@
   "featured": false,
   "period": "2026",
   "role": "企劃",
-  "sections": [
+  "blocks": [
     {
       "title": "蒔花序・365 覺醒卡",
-      "text": "透過每日抽卡，為自己加油打氣。\n卡片內容為ChatGPT生成，由Claude執行代碼，放置於Github顯示。"
+      "text": "透過每日抽卡，為自己加油打氣。\n卡片內容為ChatGPT生成，由Claude執行代碼，放置於Github顯示。",
+      "image": "/assets/images/01-365card.jpg"
     },
     {
       "title": "幸運語錄小工具",
