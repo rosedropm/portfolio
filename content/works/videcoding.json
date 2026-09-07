@@ -6,7 +6,7 @@
   "category": "AI 協作",
   "published": true,
   "order": 4,
-  "featured": false,
+  "featured": true,
   "period": "2026",
   "role": "企劃",
   "cover": "/assets/images/bonus-notion.jpg",
