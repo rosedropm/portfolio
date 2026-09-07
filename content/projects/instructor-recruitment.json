@@ -1,18 +1,19 @@
 {
   "slug": "instructor-recruitment",
-  "title": "從招募構想到\n18 位授權師資上線",
   "short_title": "品牌授權師資招募",
+  "title": "從招募構想到\n18 位授權師資上線",
+  "summary": "把師資授權制度轉化為清楚的招募訊息，串聯說明會、社群、官網與跨部門執行。",
   "category": "B2B 招募 × 品牌授權",
+  "published": true,
+  "order": 2,
+  "featured": true,
   "period": "2024.12 — 2025.08",
   "role": "專案統籌 × 內容策略",
-  "summary": "把師資授權制度轉化為清楚的招募訊息，串聯說明會、社群、官網與跨部門執行。",
   "cover": "/assets/images/instructor-01.webp",
   "cover_alt": "授權師資 IG 人物介紹版面",
   "metric": "54.5%",
   "metric_label": "意向者付款簽約轉換率",
   "metric_note": "33 位意向者中，18 位完成付款簽約。成果為專案共同產出。",
-  "order": 1,
-  "featured": true,
   "sections": [
     {
       "title": "背景與挑戰",
@@ -31,7 +32,6 @@
       "text": "33 位意向者中，18 位完成付款簽約。完成 18 位授權師資的統一介紹內容，延伸至官網、IG 圖文、影片與廣告素材。\n\n招募、資料蒐集、素材製作與上線工作，也被整理為可追蹤的流程，供後續管理、開課推廣及新一批招募使用。"
     }
   ],
-  "collaboration": "我主責專案架構、內容策略、素材整合與進度協調；資格審核由講師及管理層負責，付款簽約與業務關係由業務團隊跟進，視覺成品與設計夥伴協作完成。",
   "gallery": [
     {
       "image": "/assets/images/instructor-01.webp",
@@ -49,6 +49,7 @@
       "caption": "官網內容排版製作｜作品存檔"
     }
   ],
+  "collaboration": "我主責專案架構、內容策略、素材整合與進度協調；資格審核由講師及管理層負責，付款簽約與業務關係由業務團隊跟進，視覺成品與設計夥伴協作完成。",
   "links": [
     {
       "title": "師資專題圖文",
@@ -58,6 +59,5 @@
       "title": "師資專題影片",
       "url": "https://www.instagram.com/p/DLpR6hthBn5/"
     }
-  ],
-  "published": true
+  ]
 }
