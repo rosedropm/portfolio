@@ -1,18 +1,19 @@
 {
   "slug": "vdream-launch",
-  "title": "把複雜的品牌制度，\n轉譯為合作的起點",
   "short_title": "VDream 新品牌落地",
+  "title": "把複雜的品牌制度，\n轉譯為合作的起點",
+  "summary": "整合品牌理念、會員制度與說明會內容，建立新品牌的第一階段招募溝通路徑。",
   "category": "品牌內容 × B2B 溝通",
+  "published": true,
+  "order": 2,
+  "featured": true,
   "period": "2026 上半年｜第一階段",
   "role": "內容策略 × 專案協調",
-  "summary": "整合品牌理念、會員制度與說明會內容，建立新品牌的第一階段招募溝通路徑。",
-  "cover": "/assets/images/vdream-02.webp",
-  "cover_alt": "VDream 品牌官網內容截圖",
+  "cover": "/assets/images/brand-vdream.jpg",
+  "cover_alt": "VDream 唯夢美業平台",
   "metric": "27 位",
   "metric_label": "確認參與說明會的潛在對象",
   "metric_note": "首波邀請 50 位；27 位為確認參與意願，不等同實際到場或簽約轉換。",
-  "order": 2,
-  "featured": true,
   "sections": [
     {
       "title": "背景與挑戰",
@@ -31,7 +32,6 @@
       "text": "於 4 月 13 日完成首場準會員說明會。首波邀請 50 位潛在對象，27 位確認參與；此為到場意願指標，不等同最終簽約轉換。\n\n完成品牌小網站改版、LINE 問答與 B2B 簡報版本，建立可延伸至後續會員支持的推廣架構。"
     }
   ],
-  "collaboration": "我主責專案架構、內容轉譯、簡報修改與審核、渠道訊息整合及活動協調；主講、諮詢與簽約由講者和業務夥伴負責，平台開發及重大商業制度由管理層與專業人員決策執行。",
   "gallery": [
     {
       "image": "/assets/images/vdream-01.webp",
@@ -44,6 +44,13 @@
       "caption": "品牌內容轉譯與官網內容規劃"
     }
   ],
-  "links": [],
-  "published": true
+  "collaboration": "我主責專案架構、內容轉譯、簡報修改與審核、渠道訊息整合及活動協調；主講、諮詢與簽約由講者和業務夥伴負責，平台開發及重大商業制度由管理層與專業人員決策執行。",
+  "videos": [
+    {
+      "title": "歡迎加入 VDream 唯夢｜一個創造美業複利的新平台",
+      "url": "https://www.youtube.com/watch?v=UF6DxrIMxxE",
+      "orientation": "landscape",
+      "description": "本影片非我製作，僅為輔助說明VDream品牌內容。"
+    }
+  ]
 }
