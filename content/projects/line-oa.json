@@ -1,18 +1,19 @@
 {
   "slug": "line-oa",
-  "title": "讓每一次回覆，\n都有清楚的依據",
   "short_title": "LINE OA 與客服流程",
+  "title": "讓每一次回覆，\n都有清楚的依據",
+  "summary": "把分散的服務資訊整理成圖文選單、訊息流程與客服知識庫，讓品牌溝通更一致。",
   "category": "自有渠道 × 流程建置",
+  "published": true,
+  "order": 4,
+  "featured": true,
   "period": "2023.02 — 2026.07",
   "role": "LINE OA 主責 × 內容架構",
-  "summary": "把分散的服務資訊整理成圖文選單、訊息流程與客服知識庫，讓品牌溝通更一致。",
   "cover": "/assets/images/line-01.webp",
   "cover_alt": "LINE OA 活動推播與訊息設計",
   "metric": "約 50%",
   "metric_label": "新進服務人員培訓時間縮短",
   "metric_note": "依原作品集紀錄；透過客服 SOP 與知識庫改善新人交接。",
-  "order": 3,
-  "featured": true,
   "sections": [
     {
       "title": "背景與挑戰",
@@ -31,7 +32,6 @@
       "text": "透過客服 SOP 與知識庫，新進服務人員培訓時間縮短約 50%。\n\n圖文選單、活動訊息、自動回應與第一線客服使用相同的資訊邏輯，也降低團隊反覆查找及重寫內容的成本。"
     }
   ],
-  "collaboration": "我主責內容架構、後台設定、回覆邏輯、活動訊息與 SOP 整理。視覺素材與設計夥伴協作，第一線服務與預約由行政客服執行；專業皮膚判斷及特殊狀況轉交專業服務人員。",
   "gallery": [
     {
       "image": "/assets/images/line-01.webp",
@@ -54,6 +54,5 @@
       "caption": "客服回覆架構"
     }
   ],
-  "links": [],
-  "published": true
+  "collaboration": "我主責內容架構、後台設定、回覆邏輯、活動訊息與 SOP 整理。視覺素材與設計夥伴協作，第一線服務與預約由行政客服執行；專業皮膚判斷及特殊狀況轉交專業服務人員。"
 }
