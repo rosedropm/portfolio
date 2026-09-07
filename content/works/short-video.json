@@ -1,13 +1,14 @@
 {
   "slug": "short-video",
-  "title": "讓品牌訊息跟上社群的節奏",
   "short_title": "短影音創意企劃",
-  "category": "短影音",
-  "role": "IG 系列：趨勢洞察 × 主題提案 × 剪輯協作",
-  "period": "品牌職務作品",
+  "title": "讓品牌訊息跟上社群的節奏",
   "summary": "以社群情境與趨勢為切角，發展貼近品牌的短影音主題。",
-  "cover": "",
-  "cover_alt": "",
+  "category": "短影音",
+  "published": true,
+  "order": 6,
+  "featured": true,
+  "period": "品牌職務作品",
+  "role": "IG 系列：趨勢洞察 × 主題提案 × 剪輯協作",
   "quote": "觀察日常，\n找到被看見的切角。",
   "sections": [
     {
@@ -15,7 +16,8 @@
       "text": "從趨勢與品牌情境中提出主題，再與剪輯夥伴協作。原作品集收錄「五色咖啡托盤」、「如宣紙般的台中人」與「把院長的廢話剪掉」等內容。"
     }
   ],
-  "gallery": [],
+  "collaboration": "本頁 Instagram 系列主責趨勢洞察與主題提案，剪輯由協作夥伴完成。",
+  "note": "YouTube 影片可於本頁播放；其他社群作品請見下方原始連結。",
   "links": [
     {
       "title": "POV：五色咖啡托盤",
@@ -30,20 +32,20 @@
       "url": "https://www.instagram.com/p/DLmsEQBhriR/"
     }
   ],
-  "collaboration": "本頁 Instagram 系列主責趨勢洞察與主題提案，剪輯由協作夥伴完成。",
-  "note": "YouTube 影片可於本頁播放；其他社群作品請見下方原始連結。",
-  "order": 6,
-  "featured": true,
-  "published": true,
   "videos": [
     {
       "title": "你可能不認識我，但你一定看過這台小氣泡 DermaSPA",
       "url": "https://www.youtube.com/shorts/RksjGxgQ23c",
       "orientation": "portrait",
       "channel": "Beautysquare Taiwan",
-      "duration": "",
-      "role": "",
-      "description": ""
+      "role": "我拍攝&剪輯"
+    },
+    {
+      "title": "韓式皮膚管理，選擇我們的五大理由",
+      "url": "https://www.youtube.com/shorts/4zpFarvqyr8",
+      "orientation": "portrait",
+      "channel": "Youtube",
+      "role": "我拍攝&剪輯"
     }
   ]
 }
