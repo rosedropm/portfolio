@@ -32,3 +32,44 @@ body{font-weight:400}h1,h2,h3,.site-header nav a,.button,.menu-toggle{font-weigh
 .block-image .gallery img { width: 100%; height: auto; max-height: none; object-fit: contain; }
 .content-block .video-section { padding-block: 0; }
 .content-block .video-section > .section-head { display: none; }
+
+/* Keep inline videos on the same reading axis as the block text. */
+.content-block .video-section {
+  width: min(760px, calc(100% - 48px));
+  margin-inline: auto;
+}
+.content-block .video-item,
+.content-block .video-item:has(.landscape) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.content-block .video-frame {
+  min-width: 0;
+  min-height: 0;
+}
+.content-block .video-frame.portrait {
+  width: min(100%, 360px);
+  margin-inline: auto;
+}
+.content-block .video-frame.landscape {
+  width: 100%;
+}
+.content-block .video-description {
+  width: 100%;
+  text-align: center;
+}
+.content-block .video-description > .eyebrow,
+.content-block .video-description > h3 {
+  display: none;
+}
+.content-block .video-description .text-link {
+  margin-top: 0;
+}
+.content-block .video-description .video-fallback {
+  margin: 8px 0 0;
+}
+
