@@ -1,0 +1,860 @@
+{
+  "media": {
+    "input": "assets",
+    "output": "/assets",
+    "extensions": [
+      "jpg",
+      "jpeg",
+      "png",
+      "webp",
+      "gif",
+      "pdf"
+    ],
+    "rename": "safe"
+  },
+  "content": [
+    {
+      "name": "site",
+      "label": "基本資料・聯絡・履歷",
+      "type": "file",
+      "path": "content/site.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "name",
+          "label": "英文姓名",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "chinese_name",
+          "label": "中文姓名",
+          "type": "string"
+        },
+        {
+          "name": "role",
+          "label": "職稱／定位",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "tagline",
+          "label": "專業副標題",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "公開聯絡 Email",
+          "type": "string",
+          "required": true,
+          "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+        },
+        {
+          "name": "location",
+          "label": "所在地",
+          "type": "string"
+        },
+        {
+          "name": "resume",
+          "label": "履歷 PDF",
+          "type": "file",
+          "description": "上傳 PDF 後，關於我頁會自動出現下載按鈕。留空不顯示。"
+        },
+        {
+          "name": "site_url",
+          "label": "網站正式網址",
+          "type": "string",
+          "description": "使用 GitHub Pages 預設網址時留空即可，由發布流程自動取得。自訂網域時填 https:// 開頭的完整網址，不含末尾斜線。"
+        },
+        {
+          "name": "contact_title",
+          "label": "聯絡區標題",
+          "type": "text"
+        },
+        {
+          "name": "contact_text",
+          "label": "聯絡區說明",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "label": "首頁與分類頁文字",
+      "type": "file",
+      "path": "content/home.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "hero_title",
+          "label": "首頁大標題",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "intro",
+          "label": "首頁介紹",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "hero_image",
+          "label": "首頁主視覺",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "hero_alt",
+          "label": "主視覺圖片描述",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "hero_caption",
+          "label": "主視覺下方說明",
+          "type": "string"
+        },
+        {
+          "name": "projects_intro",
+          "label": "專案列表介紹",
+          "type": "text"
+        },
+        {
+          "name": "works_intro",
+          "label": "內容作品列表介紹",
+          "type": "text"
+        },
+        {
+          "name": "photography_intro",
+          "label": "攝影列表介紹",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "about",
+      "label": "關於我",
+      "type": "file",
+      "path": "content/about.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "about_title",
+          "label": "關於我大標題",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "portrait",
+          "label": "個人照片",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "portrait_alt",
+          "label": "照片描述",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "about_intro",
+          "label": "簡短自我介紹",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "about_body",
+          "label": "完整介紹",
+          "type": "text"
+        },
+        {
+          "name": "skills",
+          "label": "核心能力",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "能力名稱",
+              "type": "string"
+            },
+            {
+              "name": "text",
+              "label": "說明",
+              "type": "text"
+            }
+          ],
+          "list": true
+        },
+        {
+          "name": "experience",
+          "label": "工作經歷",
+          "type": "object",
+          "fields": [
+            {
+              "name": "period",
+              "label": "任職期間",
+              "type": "string"
+            },
+            {
+              "name": "company",
+              "label": "公司名稱",
+              "type": "string"
+            },
+            {
+              "name": "role",
+              "label": "職稱",
+              "type": "string"
+            },
+            {
+              "name": "text",
+              "label": "工作內容",
+              "type": "text"
+            }
+          ],
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{company}"
+            }
+          }
+        },
+        {
+          "name": "tools",
+          "label": "工具應用",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "分類",
+              "type": "string"
+            },
+            {
+              "name": "text",
+              "label": "工具與用途",
+              "type": "text"
+            }
+          ],
+          "list": true
+        },
+        {
+          "name": "collaboration",
+          "label": "合作範圍說明",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "projects",
+      "label": "專案案例",
+      "type": "collection",
+      "path": "content/projects",
+      "format": "json",
+      "filename": "{fields.slug}.json",
+      "subfolders": false,
+      "view": {
+        "primary": "short_title",
+        "fields": [
+          "short_title",
+          "category",
+          "published",
+          "order"
+        ],
+        "sort": [
+          "order",
+          "short_title"
+        ],
+        "default": {
+          "sort": "order",
+          "order": "asc"
+        }
+      },
+      "fields": [
+        {
+          "name": "slug",
+          "label": "網址代稱",
+          "type": "string",
+          "required": true,
+          "pattern": {
+            "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "message": "請使用小寫英文、數字及連字號，例如 summer-campaign。"
+          },
+          "description": "建立後盡量不要修改，避免舊連結失效。"
+        },
+        {
+          "name": "short_title",
+          "label": "列表顯示名稱",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "title",
+          "label": "頁面大標題",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "summary",
+          "label": "作品簡介",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "category",
+          "label": "作品分類",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "published",
+          "label": "顯示在網站上",
+          "type": "boolean",
+          "description": "關閉後不發布此作品。公開 GitHub 儲存庫中的內容檔仍可被讀取。"
+        },
+        {
+          "name": "order",
+          "label": "排列順序",
+          "type": "number",
+          "description": "數字越小越前面。"
+        },
+        {
+          "name": "featured",
+          "label": "首頁精選",
+          "type": "boolean",
+          "description": "專案與內容作品：按排列順序選取前 3 筆勾選的作品。"
+        },
+        {
+          "name": "period",
+          "label": "期間／作品性質",
+          "type": "string"
+        },
+        {
+          "name": "role",
+          "label": "我的角色",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "cover",
+          "label": "封面圖片",
+          "type": "image"
+        },
+        {
+          "name": "cover_alt",
+          "label": "封面圖片描述",
+          "type": "string"
+        },
+        {
+          "name": "metric",
+          "label": "成果數字",
+          "type": "string"
+        },
+        {
+          "name": "metric_label",
+          "label": "成果說明",
+          "type": "string"
+        },
+        {
+          "name": "metric_note",
+          "label": "數字計算範圍／限制",
+          "type": "text"
+        },
+        {
+          "name": "quote",
+          "label": "無圖片時的文字封面",
+          "type": "text"
+        },
+        {
+          "name": "sections",
+          "label": "文章段落",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "段落標題",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text",
+              "label": "內文",
+              "type": "text",
+              "description": "直接輸入文字。空一行會分成新段落；不需要 HTML 或 Markdown。"
+            }
+          ],
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{title}"
+            }
+          }
+        },
+        {
+          "name": "gallery",
+          "label": "作品圖片／相簿",
+          "type": "object",
+          "fields": [
+            {
+              "name": "image",
+              "label": "圖片",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "alt",
+              "label": "圖片描述（給無法看見圖片的讀者）",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "caption",
+              "label": "圖片下方說明",
+              "type": "text"
+            }
+          ],
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{alt}"
+            }
+          }
+        },
+        {
+          "name": "collaboration",
+          "label": "負責範圍與協作",
+          "type": "text"
+        },
+        {
+          "name": "note",
+          "label": "補充說明",
+          "type": "text"
+        },
+        {
+          "name": "links",
+          "label": "原始作品連結",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "連結顯示文字",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "url",
+              "label": "完整網址",
+              "type": "string",
+              "required": true,
+              "pattern": "^https?://.+"
+            }
+          ],
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{title}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "works",
+      "label": "內容作品",
+      "type": "collection",
+      "path": "content/works",
+      "format": "json",
+      "filename": "{fields.slug}.json",
+      "subfolders": false,
+      "view": {
+        "primary": "short_title",
+        "fields": [
+          "short_title",
+          "category",
+          "published",
+          "order"
+        ],
+        "sort": [
+          "order",
+          "short_title"
+        ],
+        "default": {
+          "sort": "order",
+          "order": "asc"
+        }
+      },
+      "fields": [
+        {
+          "name": "slug",
+          "label": "網址代稱",
+          "type": "string",
+          "required": true,
+          "pattern": {
+            "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "message": "請使用小寫英文、數字及連字號，例如 summer-campaign。"
+          },
+          "description": "建立後盡量不要修改，避免舊連結失效。"
+        },
+        {
+          "name": "short_title",
+          "label": "列表顯示名稱",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "title",
+          "label": "頁面大標題",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "summary",
+          "label": "作品簡介",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "category",
+          "label": "作品分類",
+          "type": "select",
+          "required": true,
+          "options": {
+            "values": [
+              "文字文案",
+              "社群圖文",
+              "短影音"
+            ]
+          }
+        },
+        {
+          "name": "published",
+          "label": "顯示在網站上",
+          "type": "boolean",
+          "description": "關閉後不發布此作品。公開 GitHub 儲存庫中的內容檔仍可被讀取。"
+        },
+        {
+          "name": "order",
+          "label": "排列順序",
+          "type": "number",
+          "description": "數字越小越前面。"
+        },
+        {
+          "name": "featured",
+          "label": "首頁精選",
+          "type": "boolean",
+          "description": "專案與內容作品：按排列順序選取前 3 筆勾選的作品。"
+        },
+        {
+          "name": "period",
+          "label": "期間／作品性質",
+          "type": "string"
+        },
+        {
+          "name": "role",
+          "label": "我的角色",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "cover",
+          "label": "封面圖片",
+          "type": "image"
+        },
+        {
+          "name": "cover_alt",
+          "label": "封面圖片描述",
+          "type": "string"
+        },
+        {
+          "name": "quote",
+          "label": "無圖片時的文字封面",
+          "type": "text"
+        },
+        {
+          "name": "sections",
+          "label": "文章段落",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "段落標題",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text",
+              "label": "內文",
+              "type": "text",
+              "description": "直接輸入文字。空一行會分成新段落；不需要 HTML 或 Markdown。"
+            }
+          ],
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{title}"
+            }
+          }
+        },
+        {
+          "name": "gallery",
+          "label": "作品圖片／相簿",
+          "type": "object",
+          "fields": [
+            {
+              "name": "image",
+              "label": "圖片",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "alt",
+              "label": "圖片描述（給無法看見圖片的讀者）",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "caption",
+              "label": "圖片下方說明",
+              "type": "text"
+            }
+          ],
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{alt}"
+            }
+          }
+        },
+        {
+          "name": "collaboration",
+          "label": "負責範圍與協作",
+          "type": "text"
+        },
+        {
+          "name": "note",
+          "label": "補充說明",
+          "type": "text"
+        },
+        {
+          "name": "links",
+          "label": "原始作品連結",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "連結顯示文字",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "url",
+              "label": "完整網址",
+              "type": "string",
+              "required": true,
+              "pattern": "^https?://.+"
+            }
+          ],
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{title}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "photography",
+      "label": "攝影相簿",
+      "type": "collection",
+      "path": "content/photography",
+      "format": "json",
+      "filename": "{fields.slug}.json",
+      "subfolders": false,
+      "view": {
+        "primary": "short_title",
+        "fields": [
+          "short_title",
+          "category",
+          "published",
+          "order"
+        ],
+        "sort": [
+          "order",
+          "short_title"
+        ],
+        "default": {
+          "sort": "order",
+          "order": "asc"
+        }
+      },
+      "fields": [
+        {
+          "name": "slug",
+          "label": "網址代稱",
+          "type": "string",
+          "required": true,
+          "pattern": {
+            "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "message": "請使用小寫英文、數字及連字號，例如 summer-campaign。"
+          },
+          "description": "建立後盡量不要修改，避免舊連結失效。"
+        },
+        {
+          "name": "short_title",
+          "label": "列表顯示名稱",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "title",
+          "label": "頁面大標題",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "summary",
+          "label": "作品簡介",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "category",
+          "label": "作品分類",
+          "type": "select",
+          "required": true,
+          "options": {
+            "values": [
+              "商品與美妝",
+              "食物與生活",
+              "活動紀實"
+            ]
+          }
+        },
+        {
+          "name": "published",
+          "label": "顯示在網站上",
+          "type": "boolean",
+          "description": "關閉後不發布此作品。公開 GitHub 儲存庫中的內容檔仍可被讀取。"
+        },
+        {
+          "name": "order",
+          "label": "排列順序",
+          "type": "number",
+          "description": "數字越小越前面。"
+        },
+        {
+          "name": "period",
+          "label": "期間／作品性質",
+          "type": "string"
+        },
+        {
+          "name": "role",
+          "label": "我的角色",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "cover",
+          "label": "封面圖片",
+          "type": "image"
+        },
+        {
+          "name": "cover_alt",
+          "label": "封面圖片描述",
+          "type": "string"
+        },
+        {
+          "name": "sections",
+          "label": "文章段落",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "段落標題",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text",
+              "label": "內文",
+              "type": "text",
+              "description": "直接輸入文字。空一行會分成新段落；不需要 HTML 或 Markdown。"
+            }
+          ],
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{title}"
+            }
+          }
+        },
+        {
+          "name": "gallery",
+          "label": "作品圖片／相簿",
+          "type": "object",
+          "fields": [
+            {
+              "name": "image",
+              "label": "圖片",
+              "type": "image",
+              "required": true
+            },
+            {
+              "name": "alt",
+              "label": "圖片描述（給無法看見圖片的讀者）",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "caption",
+              "label": "圖片下方說明",
+              "type": "text"
+            }
+          ],
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{alt}"
+            }
+          }
+        },
+        {
+          "name": "collaboration",
+          "label": "負責範圍與協作",
+          "type": "text"
+        },
+        {
+          "name": "note",
+          "label": "補充說明",
+          "type": "text"
+        },
+        {
+          "name": "links",
+          "label": "原始作品連結",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "連結顯示文字",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "url",
+              "label": "完整網址",
+              "type": "string",
+              "required": true,
+              "pattern": "^https?://.+"
+            }
+          ],
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{title}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
