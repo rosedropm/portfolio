@@ -70,12 +70,12 @@ def nav(prefix, active):
     links = [('index.html','首頁','home'),('projects/index.html','專案案例','projects'),('works/index.html','內容作品','works'),('photography/index.html','攝影','photography'),('about/index.html','關於我','about')]
     items = ''.join(f'<a href="{prefix}{url}"'+(' aria-current="page"' if active == key else '')+f'>{label}</a>' for url,label,key in links)
     return f'''<a class="skip" href="#main">跳到主要內容</a><header class="site-header"><div class="header-inner">
-    <a class="wordmark" href="{prefix}index.html" aria-label="{E(site['name'])} 首頁">{E(site['name'])}<span class="brand-star" aria-hidden="true">✳</span></a>
+    <a class="wordmark" href="{prefix}index.html" aria-label="{E(site['name'])} 首頁">{E(site['name'])}<span class="brand-star" aria-hidden="true">❊</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">選單 <span aria-hidden="true">＋</span></button>
     <nav id="main-nav" aria-label="主選單">{items}<a class="nav-contact" href="{prefix}about/index.html#contact">聯絡我 {arrow()}</a></nav></div></header>'''
 
 def footer(prefix):
-    return f'''<footer class="site-footer"><div><a class="wordmark" href="{prefix}index.html">{E(site['name'])}<span class="brand-star" aria-hidden="true">✳</span></a><p>{E(site['tagline'])}</p></div><div class="footer-right"><a href="mailto:{E(site['email'])}">{E(site['email'])} {arrow()}</a><p>{E(site['location'])} · <a href="{prefix}sitemap.html">網站地圖</a></p><small>作品依各專案標示個人負責範圍與協作分工。</small></div></footer>'''
+    return f'''<footer class="site-footer"><div><a class="wordmark" href="{prefix}index.html">{E(site['name'])}<span class="brand-star" aria-hidden="true">❊</span></a><p>{E(site['tagline'])}</p></div><div class="footer-right"><a href="mailto:{E(site['email'])}">{E(site['email'])} {arrow()}</a><p>{E(site['location'])} · <a href="{prefix}sitemap.html">網站地圖</a></p><small>作品依各專案標示個人負責範圍與協作分工。</small></div></footer>'''
 
 def layout(route, title, description, body, active, prefix=''):
     canonical = f'<link rel="canonical" href="{E(base)}/{route}">' if base else ''
@@ -88,7 +88,7 @@ def card(item, group, prefix, number=None):
     if item.get('cover'):
         art=image(item['cover'],item.get('cover_alt') or item['short_title'],prefix)
     else:
-        art=f'<div class="type-art"><span class="type-art-label">{E(item["category"])} / SELECTED WORDS</span><p>{E(item.get("quote") or item["title"]).replace(chr(10),"<br>")}</p><span class="type-art-bottom">Esther Jhang <span aria-hidden="true">✳</span></span></div>'
+        art=f'<div class="type-art"><span class="type-art-label">{E(item["category"])} / SELECTED WORDS</span><p>{E(item.get("quote") or item["title"]).replace(chr(10),"<br>")}</p><span class="type-art-bottom">Esther Jhang <span aria-hidden="true">❊</span></span></div>'
     number_html=f'<span class="card-number">{number:02}</span>' if number is not None else ''
     stat=f'<p class="card-stat"><strong>{E(item["metric"])}</strong> {E(item["metric_label"])}</p>' if item.get('metric') else ''
     return f'''<article class="work-card {group}-card" data-category="{E(item['category'])}"><a class="card-link" href="{href}"><div class="card-image">{art}{number_html}<span class="card-open" aria-hidden="true">↗</span></div><div class="card-body"><p class="eyebrow">{E(item['category'])}</p><h3>{E(item['short_title'])}</h3><p class="card-summary">{E(item['summary'])}</p>{stat}</div></a></article>'''
