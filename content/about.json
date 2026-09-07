@@ -4,20 +4,6 @@
   "portrait_alt": "Esther Jhang 個人照片",
   "about_intro": "我是 Esther，具備美妝產業 B2B 專業通路與 B2C 品牌溝通經驗。我的職涯從影音與社群內容製作起步，逐步延伸至品牌內容策略、整合行銷與小型團隊管理。",
   "about_body": "我希望成為團隊中能帶來方向與秩序的人：把零散資訊整理為清楚內容，並將複雜需求轉化為可執行的工作流程。\n\n比起成為最耀眼的太陽，我更想成為能在夜空中提供方向的北極星。\n\n在有限資源下，我透過品牌內容、素材規劃與流程整合，支援品牌導流、專案轉換與團隊執行。鏡頭之外，我也持續透過攝影，練習觀察生活裡的光線、互動與細節。",
-  "experience": [
-    {
-      "period": "2022.07 — 2026.07",
-      "company": "韓國儷人閣",
-      "role": "品牌行銷企劃 → 行銷部主管",
-      "text": "參與品牌在台灣的 B2B／B2C 內容建置，整合社群、官網、LINE OA、簡報與實體活動。帶領小型行銷團隊，負責任務分配、內容審核與跨部門專案推進。"
-    },
-    {
-      "period": "2019.08 — 2022.03",
-      "company": "小三美日｜豐晨貿易",
-      "role": "社群行銷專員（影音小編）",
-      "text": "依商品與檔期規劃美妝、生活選品內容，獨立完成腳本企劃、商品拍攝、影片剪輯與貼文撰寫，並延伸互動型社群題材。"
-    }
-  ],
   "skills": [
     {
       "title": "品牌內容策略",
@@ -32,18 +18,32 @@
       "text": "專案拆解、時程與任務安排、跨部門協調、內容品質管理。"
     }
   ],
+  "experience": [
+    {
+      "period": "2022.07 — 2026.07",
+      "company": "韓國儷人閣",
+      "role": "品牌行銷企劃 → 行銷部主管",
+      "text": "參與品牌在台灣的 B2B／B2C 內容建置，整合社群、官網、LINE OA、簡報與實體活動。帶領小型行銷團隊，負責任務分配、內容審核與跨部門專案推進。"
+    },
+    {
+      "period": "2019.08 — 2022.03",
+      "company": "小三美日｜豐晨貿易",
+      "role": "社群行銷專員（影音小編）",
+      "text": "依商品與檔期規劃美妝、生活選品內容，獨立完成腳本企劃、商品拍攝、影片剪輯與貼文撰寫，並延伸互動型社群題材。"
+    }
+  ],
   "tools": [
     {
       "title": "內容製作",
       "text": "Photoshop、Illustrator、Lightroom、Premiere、剪映、PowerPoint"
     },
     {
-      "title": "渠道營運",
-      "text": "LINE OA、WordPress／Elementor、Easystore、Meta Business Suite"
+      "title": "平台營運",
+      "text": "LINE OA、Meta Business Suite"
     },
     {
-      "title": "專案整理",
-      "text": "Notion、Excel、Google 生產力工具"
+      "title": "生產力工具",
+      "text": "Notion、Office (Word / Excel / PowerPoint) 、Google Workspace"
     }
   ],
   "collaboration": "我主要負責內容策略、專案整合與素材製作。專業品牌識別、大型商業棚拍、廣告帳戶優化與網站系統開發，則與對應專業夥伴協作。"
