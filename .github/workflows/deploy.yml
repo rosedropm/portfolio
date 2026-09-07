@@ -1,0 +1,49 @@
+name: Publish portfolio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Read repository
+        uses: actions/checkout@v6
+      - name: Read Pages URL
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build static portfolio
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+        run: python3 build.py
+      - name: Verify links and images
+        run: python3 check.py _site
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4
