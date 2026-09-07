@@ -184,9 +184,7 @@ def detail(item,group):
     intro=f'''<section class="detail-head wrap"><a class="back-link" href="../index.html">← {labels[group]}</a><p class="eyebrow">{E(item['category'])}</p><h1>{E(item['title']).replace(chr(10),'<br>')}</h1><p class="detail-summary">{E(item['summary'])}</p><dl class="detail-meta"><div><dt>期間 / PERIOD</dt><dd>{E(item.get('period'))}</dd></div><div><dt>我的角色 / ROLE</dt><dd>{E(item['role'])}</dd></div></dl></section>'''
     if item.get('metric'):
         intro+=f'<aside class="result-band wrap"><strong>{E(item["metric"])}</strong><div><h2>{E(item["metric_label"])}</h2><p>{E(item.get("metric_note"))}</p></div></aside>'
-    if item.get('cover') and not isphoto:
-        intro+=f'<figure class="detail-cover wrap">{image(item["cover"],item.get("cover_alt") or item["short_title"],prefix,True)}</figure>'
-    elif item.get('quote') and not item.get('videos') and not use_blocks:
+    if not (item.get('cover') and not isphoto) and item.get('quote') and not item.get('videos') and not use_blocks:
         intro+=f'<blockquote class="work-quote wrap"><p>{E(item["quote"]).replace(chr(10),"<br>")}</p></blockquote>'
     if use_blocks:
         intro += content_blocks(blocks, prefix)
@@ -256,5 +254,6 @@ for old in previous_files:
         if OUT in candidate.parents and candidate.is_file(): candidate.unlink()
 manifest_path.write_text(json.dumps(sorted(generated)), encoding='utf-8')
 print(f'Built {len(routes)+1} HTML pages and {len(assets)} assets into {OUT.name}.')
+
 
 
