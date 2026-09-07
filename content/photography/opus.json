@@ -1,0 +1,58 @@
+{
+  "slug": "opus",
+  "title": "Opus｜日常裡的甜",
+  "short_title": "Opus 甜點",
+  "category": "食物與生活",
+  "period": "2022.07.14",
+  "role": "攝影｜Pentax K3",
+  "summary": "透過光線與構圖，記錄甜點與生活的柔和片刻。",
+  "cover": "/assets/images/food-01.webp",
+  "cover_alt": "Opus 甜點攝影",
+  "gallery": [
+    {
+      "image": "/assets/images/food-01.webp",
+      "alt": "Opus 甜點攝影 01",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/food-02.webp",
+      "alt": "Opus 甜點攝影 02",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/food-03.webp",
+      "alt": "Opus 甜點攝影 03",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/food-04.webp",
+      "alt": "Opus 甜點攝影 04",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/food-05.webp",
+      "alt": "Opus 甜點攝影 05",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/food-06.webp",
+      "alt": "Opus 甜點攝影 06",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/food-07.webp",
+      "alt": "Opus 甜點攝影 07",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/food-08.webp",
+      "alt": "Opus 甜點攝影 08",
+      "caption": ""
+    }
+  ],
+  "collaboration": "自由創作。",
+  "sections": [],
+  "links": [],
+  "order": 2,
+  "published": true
+}

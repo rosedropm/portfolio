@@ -1,0 +1,58 @@
+{
+  "slug": "brand-social",
+  "title": "品牌社群的內容節奏",
+  "short_title": "品牌社群內容規劃",
+  "category": "社群圖文",
+  "role": "內容規劃 × 貼文排程",
+  "period": "品牌職務作品",
+  "summary": "依產品、課程與品牌形象安排主題，讓儷人閣與德瑪貝爾的社群維持一致的溝通脈絡。",
+  "cover": "/assets/images/brand-01.webp",
+  "cover_alt": "儷人閣品牌社群版面",
+  "sections": [
+    {
+      "title": "內容規劃",
+      "text": "依據產品推廣、課程招生、品牌形象與活動需求安排貼文主題，規劃品牌社群內容與貼文排程。透過長期規劃，維持版面一致性與內容節奏。"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "/assets/images/brand-01.webp",
+      "alt": "品牌社群版面作品",
+      "caption": "儷人閣"
+    },
+    {
+      "image": "/assets/images/brand-02.webp",
+      "alt": "品牌社群版面作品",
+      "caption": "儷人閣"
+    },
+    {
+      "image": "/assets/images/brand-03.webp",
+      "alt": "品牌社群版面作品",
+      "caption": "德瑪貝爾"
+    },
+    {
+      "image": "/assets/images/brand-04.webp",
+      "alt": "品牌社群版面作品",
+      "caption": "德瑪貝爾"
+    },
+    {
+      "image": "/assets/images/brand-05.webp",
+      "alt": "品牌社群版面作品",
+      "caption": "德瑪貝爾"
+    }
+  ],
+  "links": [
+    {
+      "title": "儷人閣學院 Instagram",
+      "url": "https://www.instagram.com/beautysquare_tw/"
+    },
+    {
+      "title": "德瑪貝爾 Instagram",
+      "url": "https://www.instagram.com/dermabellofficial_tw/"
+    }
+  ],
+  "collaboration": "主責內容規劃與排程；品牌整體視覺包含與設計夥伴協作的產出。",
+  "order": 1,
+  "featured": false,
+  "published": true
+}

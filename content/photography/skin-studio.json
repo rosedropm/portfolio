@@ -1,0 +1,48 @@
+{
+  "slug": "skin-studio",
+  "title": "皮膚管理店｜空間與現場",
+  "short_title": "皮膚管理店記錄",
+  "category": "活動紀實",
+  "period": "2023.02",
+  "role": "攝影｜Canon 5D4、Nikon D300",
+  "summary": "記錄品牌服務空間與現場細節。",
+  "cover": "/assets/images/store-01.webp",
+  "cover_alt": "皮膚管理店現場攝影",
+  "gallery": [
+    {
+      "image": "/assets/images/store-01.webp",
+      "alt": "皮膚管理店現場記錄 01",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/store-02.webp",
+      "alt": "皮膚管理店現場記錄 02",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/store-03.webp",
+      "alt": "皮膚管理店現場記錄 03",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/store-04.webp",
+      "alt": "皮膚管理店現場記錄 04",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/store-05.webp",
+      "alt": "皮膚管理店現場記錄 05",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/store-06.webp",
+      "alt": "皮膚管理店現場記錄 06",
+      "caption": ""
+    }
+  ],
+  "collaboration": "公司職務作品。",
+  "sections": [],
+  "links": [],
+  "order": 3,
+  "published": true
+}

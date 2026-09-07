@@ -1,0 +1,58 @@
+{
+  "slug": "framtiden",
+  "title": "Framtiden.29｜光裡的細節",
+  "short_title": "Framtiden.29 飾品",
+  "category": "商品與美妝",
+  "period": "2023.10｜秋季飾品",
+  "role": "攝影",
+  "summary": "以自然光記錄飾品的材質與細節。",
+  "cover": "/assets/images/jewelry-02.webp",
+  "cover_alt": "Framtiden.29 秋季飾品攝影",
+  "gallery": [
+    {
+      "image": "/assets/images/jewelry-02.webp",
+      "alt": "Framtiden.29 秋季飾品攝影 01",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/jewelry-03.webp",
+      "alt": "Framtiden.29 秋季飾品攝影 02",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/jewelry-04.webp",
+      "alt": "Framtiden.29 秋季飾品攝影 03",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/jewelry-05.webp",
+      "alt": "Framtiden.29 秋季飾品攝影 04",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/jewelry-06.webp",
+      "alt": "Framtiden.29 秋季飾品攝影 05",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/jewelry-07.webp",
+      "alt": "Framtiden.29 秋季飾品攝影 06",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/jewelry-08.webp",
+      "alt": "Framtiden.29 秋季飾品攝影 07",
+      "caption": ""
+    },
+    {
+      "image": "/assets/images/jewelry-09.webp",
+      "alt": "Framtiden.29 秋季飾品攝影 08",
+      "caption": ""
+    }
+  ],
+  "collaboration": "商業互惠作品。",
+  "sections": [],
+  "links": [],
+  "order": 1,
+  "published": true
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "product-story",
+  "title": "從產品資訊，到消費者的買點",
+  "short_title": "商品文案與銷售頁企劃",
+  "category": "文字文案",
+  "role": "商品文案 × 內容企劃",
+  "period": "品牌職務作品",
+  "summary": "研讀產品資料，整理成消費者可理解的賣點，延伸至銷售頁與募資專案內容。",
+  "cover": "/assets/images/brand-11.webp",
+  "cover_alt": "COSGRAM 仙女套組商品內容作品",
+  "sections": [
+    {
+      "title": "電商銷售頁企劃",
+      "text": "研讀產品簡報，將產品特性寫成消費者可理解的賣點與買點。作品包含德瑪貝爾水光膠原撕拉面膜與玫瑰凝膠軟膜預購頁，並與設計夥伴協作完成頁面呈現。"
+    },
+    {
+      "title": "募資商品內容",
+      "text": "COSGRAM 仙女套組募資專案中，參與商品文案與內容企劃。原嘖嘖頁面已下架，本頁保留作品圖與公開貼文連結。"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "/assets/images/brand-11.webp",
+      "alt": "COSGRAM 仙女套組商品內容作品",
+      "caption": "募資專案｜商品文案與內容企劃"
+    }
+  ],
+  "links": [
+    {
+      "title": "COSGRAM 公開影片",
+      "url": "https://www.facebook.com/reel/668704365500755/"
+    }
+  ],
+  "collaboration": "主責商品文案與內容企劃；電商銷售頁與設計夥伴協作。",
+  "order": 5,
+  "featured": false,
+  "published": true
+}
