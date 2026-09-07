@@ -1,0 +1,40 @@
+{
+  "slug": "brand-dermabell",
+  "short_title": "韓國德瑪貝爾台灣",
+  "title": "德瑪貝爾｜韓國皮膚管理院線在台灣如何落地",
+  "summary": "Dermabell 台灣不只導入韓國院線產品，更以皮膚管理示範門市建立正統韓式服務標準，並透過社群、LINE OA 與教育內容持續經營市場。2023–2026 年 LINE 好友累積至 2,180 人，逐步建立品牌在台灣的官方認知與私域溝通基礎。",
+  "category": "品牌營運",
+  "published": true,
+  "featured": false,
+  "role": "企劃",
+  "cover": "/assets/brand-dermabell.jpg",
+  "blocks": [
+    {
+      "title": "把已有產品聲量，轉化成官方品牌認知與消費者信任",
+      "text": "Dermabell 德瑪貝爾在海外美容市場已有一定知名度，其中 Modeling Pack 凝膠軟膜更是品牌具代表性的院線產品。品牌正式進入台灣後，我參與官方內容在地化、產品資訊建置、社群溝通與消費者教育，協助市場從「聽過產品」，進一步認識品牌、辨識官方來源，並建立可信任的台灣溝通窗口。\n",
+      "image": "/assets/images/brand-dermabell-01.jpg"
+    },
+    {
+      "title": "台灣市場獨有的：皮膚管理服務旗艦店",
+      "text": "Dermabell 在台灣不只販售產品，更曾設立皮膚管理示範門市，將正統韓式皮膚管理流程完整落地。門市的角色不是單純經營消費服務，而是作為店家與學員可實際觀摩的示範場域，讓市場理解產品應如何被正確運用。隨著學員累積、授權師資與店家逐步建立，示範任務完成後，品牌也轉向以教育與授權體系延續這套服務標準。",
+      "image": "/assets/images/store-01.webp",
+      "alt": "Dermabell台灣旗艦店",
+      "video_url": "https://www.youtube.com/shorts/R14hPVybGCc",
+      "orientation": "portrait"
+    },
+    {
+      "title": "從社群流量，沉澱出可持續溝通的品牌好友",
+      "text": "2023–2026 年間，Dermabell LINE OA 累積超過 2,180 位好友。相較於社群的一次性觸及，LINE 承接了對皮膚管理服務、產品與課程已有興趣的受眾，成為品牌進行諮詢、預約、活動通知與後續溝通的重要私域渠道。",
+      "image": "/assets/images/brand-dermabell-02.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "title": "最適合亞洲人的皮膚檢測儀MEI.VU",
+      "url": "https://www.youtube.com/shorts/k6FuHrzUQz0",
+      "orientation": "portrait",
+      "channel": "Beautysquare Taiwan",
+      "role": "拍攝&剪輯"
+    }
+  ]
+}
