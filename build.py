@@ -157,26 +157,49 @@ def video_gallery(videos):
         cards.append(f'''<article class="video-item"><div class="video-frame {shape}"><iframe src="{E(embed)}" title="{E(title)}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen; web-share" allowfullscreen></iframe></div><div class="video-description"><p class="eyebrow">YOUTUBE / {E(meta)}</p><h3>{E(title)}</h3>{role}{paragraphs(video.get('description'))}<a class="text-link" href="https://www.youtube.com/watch?v={vid}" target="_blank" rel="noopener noreferrer">前往 YouTube 觀看 ↗<span class="sr-only">（另開分頁）</span></a><p class="video-fallback">若播放器無法載入，請使用上方連結觀看原片。</p></div></article>''')
     return '<section class="wrap video-section"><div class="section-head"><div><p class="eyebrow">SELECTED FILMS</p><h2>精選影片。</h2></div></div><div class="video-list">' + ''.join(cards) + '</div></section>'
 
+def content_blocks(blocks, prefix):
+    rendered = []
+    for block in blocks:
+        if not any(block.get(k) for k in ('title', 'text', 'image', 'video_url')):
+            continue
+        title = block.get('title') or ''
+        text = paragraphs(block.get('text'))
+        heading = f'<h2>{E(title)}</h2>' if title else ''
+        body = f'<div class="block-copy narrow">{heading}{text}</div>' if heading or text else ''
+        if block.get('image'):
+            caption = block.get('caption') or ''
+            alt = block.get('alt') or caption or title or '作品圖片'
+            body += '<div class="block-image wrap">' + gallery([{'image': block['image'], 'alt': alt, 'caption': caption}], prefix) + '</div>'
+        if block.get('video_url'):
+            body += video_gallery([{'url': block['video_url'], 'title': title or '作品影片', 'orientation': block.get('orientation') or 'portrait'}])
+        rendered.append('<div class="content-block">' + body + '</div>')
+    return '<div class="content-blocks">' + ''.join(rendered) + '</div>'
+
 def detail(item,group):
     prefix='../../'
     labels={'projects':'專案案例','works':'內容作品','photography':'攝影'}
     isphoto=group=='photography'
+    blocks = item.get('blocks') or [] if not isphoto else []
+    use_blocks = any(any(b.get(k) for k in ('title', 'text', 'image', 'video_url')) for b in blocks)
     intro=f'''<section class="detail-head wrap"><a class="back-link" href="../index.html">← {labels[group]}</a><p class="eyebrow">{E(item['category'])}</p><h1>{E(item['title']).replace(chr(10),'<br>')}</h1><p class="detail-summary">{E(item['summary'])}</p><dl class="detail-meta"><div><dt>期間 / PERIOD</dt><dd>{E(item.get('period'))}</dd></div><div><dt>我的角色 / ROLE</dt><dd>{E(item['role'])}</dd></div></dl></section>'''
     if item.get('metric'):
         intro+=f'<aside class="result-band wrap"><strong>{E(item["metric"])}</strong><div><h2>{E(item["metric_label"])}</h2><p>{E(item.get("metric_note"))}</p></div></aside>'
     if item.get('cover') and not isphoto:
         intro+=f'<figure class="detail-cover wrap">{image(item["cover"],item.get("cover_alt") or item["short_title"],prefix,True)}</figure>'
-    elif item.get('quote') and not item.get('videos'):
+    elif item.get('quote') and not item.get('videos') and not use_blocks:
         intro+=f'<blockquote class="work-quote wrap"><p>{E(item["quote"]).replace(chr(10),"<br>")}</p></blockquote>'
-    if item.get('videos'):
-        intro += video_gallery(item['videos'])
-    sections=item.get('sections') or []
-    toc=''.join(f'<a href="#section-{i}">{i+1:02} {E(s["title"])}</a>' for i,s in enumerate(sections))
-    writing=''.join(f'<section id="section-{i}" class="story-section"><span class="eyebrow">{i+1:02}</span><h2>{E(s["title"])}</h2>{paragraphs(s.get("text"))}</section>' for i,s in enumerate(sections))
-    if sections:
-        intro+=f'<div class="story-layout wrap"><aside class="story-toc" aria-label="本頁目錄">{toc}</aside><div class="story-copy">{writing}</div></div>'
-    if item.get('gallery'):
-        intro+=f'<section class="wrap section">{section_head("SELECTED IMAGES" if isphoto else "THE OUTPUT","影像選集" if isphoto else "代表產出")}{gallery(item["gallery"],prefix,isphoto)}</section>'
+    if use_blocks:
+        intro += content_blocks(blocks, prefix)
+    else:
+        if item.get('videos'):
+            intro += video_gallery(item['videos'])
+        sections=item.get('sections') or []
+        toc=''.join(f'<a href="#section-{i}">{i+1:02} {E(s["title"])}</a>' for i,s in enumerate(sections))
+        writing=''.join(f'<section id="section-{i}" class="story-section"><span class="eyebrow">{i+1:02}</span><h2>{E(s["title"])}</h2>{paragraphs(s.get("text"))}</section>' for i,s in enumerate(sections))
+        if sections:
+            intro+=f'<div class="story-layout wrap"><aside class="story-toc" aria-label="本頁目錄">{toc}</aside><div class="story-copy">{writing}</div></div>'
+        if item.get('gallery'):
+            intro+=f'<section class="wrap section">{section_head("SELECTED IMAGES" if isphoto else "THE OUTPUT","影像選集" if isphoto else "代表產出")}{gallery(item["gallery"],prefix,isphoto)}</section>'
     if item.get('note'):intro+=f'<p class="content-note narrow">{E(item["note"])}</p>'
     if item.get('links'):
         intro+='<section class="narrow source-links"><h2>原始作品</h2>'+''.join(f'<a href="{external(l["url"])}" target="_blank" rel="noopener noreferrer">{E(l["title"])} {arrow()}<span class="sr-only">（另開分頁）</span></a>' for l in item['links'])+'</section>'
@@ -233,4 +256,5 @@ for old in previous_files:
         if OUT in candidate.parents and candidate.is_file(): candidate.unlink()
 manifest_path.write_text(json.dumps(sorted(generated)), encoding='utf-8')
 print(f'Built {len(routes)+1} HTML pages and {len(assets)} assets into {OUT.name}.')
+
 

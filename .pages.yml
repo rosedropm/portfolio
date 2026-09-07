@@ -365,8 +365,66 @@
           "type": "text"
         },
         {
+          "name": "blocks",
+          "label": "圖文內容區塊（新版，可排序）",
+          "type": "object",
+          "list": true,
+          "description": "新增作品請在這裡依閱讀順序加入區塊。每個區塊可填文字、圖片或 YouTube，未使用的欄位留空；區塊內依文字→圖片→影片顯示。填入有效區塊後，舊版段落、相簿與影片區不會顯示；資料仍保留。清空所有區塊可恢復舊版。",
+          "fields": [
+            {
+              "name": "title",
+              "label": "區塊標題（選填）",
+              "type": "string"
+            },
+            {
+              "name": "text",
+              "label": "文字（選填）",
+              "type": "text",
+              "description": "支援換行與空行分段；不需貼 HTML。"
+            },
+            {
+              "name": "image",
+              "label": "圖片（選填）",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "圖片替代文字",
+              "type": "string",
+              "description": "有圖片時請簡短描述畫面。"
+            },
+            {
+              "name": "caption",
+              "label": "圖片下方說明（選填）",
+              "type": "text"
+            },
+            {
+              "name": "video_url",
+              "label": "YouTube 網址（選填，可貼 Shorts）",
+              "type": "string"
+            },
+            {
+              "name": "orientation",
+              "label": "影片比例",
+              "type": "select",
+              "options": {
+                "values": [
+                  {
+                    "value": "portrait",
+                    "label": "直式 9:16"
+                  },
+                  {
+                    "value": "landscape",
+                    "label": "橫式 16:9"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "name": "sections",
-          "label": "文章段落",
+          "label": "舊版｜文章段落",
           "type": "object",
           "fields": [
             {
@@ -387,11 +445,12 @@
               "collapsed": true,
               "summary": "{title}"
             }
-          }
+          },
+          "description": "未填新版圖文內容區塊時使用。原有作品可繼續使用；新版作品請將內容填在上方圖文內容區塊。"
         },
         {
           "name": "gallery",
-          "label": "作品圖片／相簿",
+          "label": "舊版｜作品圖片／相簿",
           "type": "object",
           "fields": [
             {
@@ -417,7 +476,8 @@
               "collapsed": true,
               "summary": "{alt}"
             }
-          }
+          },
+          "description": "未填新版圖文內容區塊時使用。原有作品可繼續使用；新版作品請將內容填在上方圖文內容區塊。"
         },
         {
           "name": "collaboration",
@@ -457,7 +517,7 @@
         },
         {
           "name": "videos",
-          "label": "YouTube 影片（可直接貼 Shorts 網址）",
+          "label": "舊版｜YouTube 影片（可直接貼 Shorts 網址）",
           "type": "object",
           "list": {
             "collapsible": {
@@ -516,7 +576,8 @@
               "label": "影片說明（選填）",
               "type": "text"
             }
-          ]
+          ],
+          "description": "未填新版圖文內容區塊時使用。原有作品可繼續使用；新版作品請將內容填在上方圖文內容區塊。"
         }
       ]
     },
@@ -634,8 +695,66 @@
           "type": "text"
         },
         {
+          "name": "blocks",
+          "label": "圖文內容區塊（新版，可排序）",
+          "type": "object",
+          "list": true,
+          "description": "新增作品請在這裡依閱讀順序加入區塊。每個區塊可填文字、圖片或 YouTube，未使用的欄位留空；區塊內依文字→圖片→影片顯示。填入有效區塊後，舊版段落、相簿與影片區不會顯示；資料仍保留。清空所有區塊可恢復舊版。",
+          "fields": [
+            {
+              "name": "title",
+              "label": "區塊標題（選填）",
+              "type": "string"
+            },
+            {
+              "name": "text",
+              "label": "文字（選填）",
+              "type": "text",
+              "description": "支援換行與空行分段；不需貼 HTML。"
+            },
+            {
+              "name": "image",
+              "label": "圖片（選填）",
+              "type": "image"
+            },
+            {
+              "name": "alt",
+              "label": "圖片替代文字",
+              "type": "string",
+              "description": "有圖片時請簡短描述畫面。"
+            },
+            {
+              "name": "caption",
+              "label": "圖片下方說明（選填）",
+              "type": "text"
+            },
+            {
+              "name": "video_url",
+              "label": "YouTube 網址（選填，可貼 Shorts）",
+              "type": "string"
+            },
+            {
+              "name": "orientation",
+              "label": "影片比例",
+              "type": "select",
+              "options": {
+                "values": [
+                  {
+                    "value": "portrait",
+                    "label": "直式 9:16"
+                  },
+                  {
+                    "value": "landscape",
+                    "label": "橫式 16:9"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "name": "sections",
-          "label": "文章段落",
+          "label": "舊版｜文章段落",
           "type": "object",
           "fields": [
             {
@@ -656,11 +775,12 @@
               "collapsed": true,
               "summary": "{title}"
             }
-          }
+          },
+          "description": "未填新版圖文內容區塊時使用。原有作品可繼續使用；新版作品請將內容填在上方圖文內容區塊。"
         },
         {
           "name": "gallery",
-          "label": "作品圖片／相簿",
+          "label": "舊版｜作品圖片／相簿",
           "type": "object",
           "fields": [
             {
@@ -686,7 +806,8 @@
               "collapsed": true,
               "summary": "{alt}"
             }
-          }
+          },
+          "description": "未填新版圖文內容區塊時使用。原有作品可繼續使用；新版作品請將內容填在上方圖文內容區塊。"
         },
         {
           "name": "collaboration",
@@ -726,7 +847,7 @@
         },
         {
           "name": "videos",
-          "label": "YouTube 影片（可直接貼 Shorts 網址）",
+          "label": "舊版｜YouTube 影片（可直接貼 Shorts 網址）",
           "type": "object",
           "list": {
             "collapsible": {
@@ -785,7 +906,8 @@
               "label": "影片說明（選填）",
               "type": "text"
             }
-          ]
+          ],
+          "description": "未填新版圖文內容區塊時使用。原有作品可繼續使用；新版作品請將內容填在上方圖文內容區塊。"
         }
       ]
     },
