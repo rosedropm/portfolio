@@ -9,8 +9,13 @@
   "featured": false,
   "period": "2026",
   "role": "企劃",
-  "cover": "/assets/images/00-cover.jpg",
+  "cover": "/assets/bonus-notion.jpg",
   "blocks": [
+    {
+      "title": "我的Notion工作日誌",
+      "text": "為了讓工作日誌介面更加活潑，我加入了抽卡、語錄等等。",
+      "image": "/assets/images/notion.jpg"
+    },
     {
       "title": "蒔花序・365 覺醒卡",
       "text": "透過每日抽卡，為自己加油打氣。\n卡片內容為ChatGPT生成，由Claude執行代碼，放置於Github顯示。",
