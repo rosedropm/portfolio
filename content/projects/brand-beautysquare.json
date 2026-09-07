@@ -14,10 +14,22 @@
       "title": "從 104 徵才資訊，到台灣市場的品牌落地",
       "text": "2022 年，BeautySquare 韓國儷人閣正式進入台灣。我是台灣團隊第一批成員之一；加入時，品牌在 Google 上的中文公開資訊仍十分有限。\n\n我的工作從 0 開始：整理旗下 Dermabell 德瑪貝爾產品資料、建立中文內容與在地溝通語調，並逐步延伸至官網、社群、LINE OA、課程招生與名單收集;。",
       "image": "/assets/brand-beautysquare-01.jpg",
-      "caption": "2026/09 Google儷人閣的結果",
-      "video_url": "https://www.youtube.com/watch?v=MrLXhEo-PqQ",
-      "orientation": "landscape"
+      "caption": "2026/09 Google儷人閣的結果"
+    },
+    {
+      "title": "LINE OA 經營概況",
+      "text": "2025年開始經營LINE OA，由我與業務回覆，方便更多需要購買產品的店家及想學習皮膚管理的個人來聯繫我們。",
+      "image": "/assets/brand-beautysquare-02.jpg"
     }
   ],
-  "note": "影片為2022年製作的品牌介紹影片，協助業務去推廣品牌。"
+  "videos": [
+    {
+      "title": "儷人閣品牌介紹",
+      "url": "https://www.youtube.com/watch?v=MrLXhEo-PqQ",
+      "orientation": "landscape",
+      "channel": "Beautysquare Taiwan",
+      "role": "拍攝&剪輯",
+      "description": "影片為2022年製作的品牌介紹影片，協助業務去推廣品牌。"
+    }
+  ]
 }
