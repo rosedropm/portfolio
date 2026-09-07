@@ -1,0 +1,45 @@
+{
+  "slug": "michsalon",
+  "short_title": "MichSalon",
+  "title": "美髮沙龍活動記錄",
+  "summary": "課程服務與精油示範的活動記錄",
+  "category": "活動紀實",
+  "published": true,
+  "role": "攝影",
+  "gallery": [
+    {
+      "image": "/assets/images/michsalon/slyc-2231.jpg",
+      "alt": "2025/08 情緒地圖 01"
+    },
+    {
+      "image": "/assets/images/michsalon/slyc-2237.jpg",
+      "alt": "2025/08 情緒地圖 02"
+    },
+    {
+      "image": "/assets/images/michsalon/slyc-2247.jpg",
+      "alt": "2025/08 情緒地圖 03"
+    },
+    {
+      "image": "/assets/images/michsalon/slyc-2249.jpg",
+      "alt": "2025/08 情緒地圖 04"
+    },
+    {
+      "image": "/assets/images/michsalon/slyc-00443.jpg",
+      "alt": "2025/04 頭皮養護教學 01"
+    },
+    {
+      "image": "/assets/images/michsalon/slyc-00631.jpg",
+      "alt": "2025/04 頭皮養護教學 02"
+    },
+    {
+      "image": "/assets/images/michsalon/slyc-00647.jpg",
+      "alt": "2025/04 頭皮養護教學 03"
+    }
+  ],
+  "links": [
+    {
+      "title": "獨家 𝐌𝐢𝐂𝐇 頭皮養護SPA｜培訓課程內容介紹",
+      "url": "https://www.instagram.com/p/Db29U_7j0EZ/"
+    }
+  ]
+}
