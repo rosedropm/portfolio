@@ -1,0 +1,46 @@
+{
+  "slug": "wedding",
+  "short_title": "婚禮記錄",
+  "title": "婚禮紀實",
+  "summary": "簡單的婚禮記錄",
+  "category": "活動紀實",
+  "published": true,
+  "order": -4,
+  "period": "2026.03｜春季",
+  "role": "攝影",
+  "cover": "/assets/2026-06-02-ruei-1.jpg",
+  "gallery": [
+    {
+      "image": "/assets/2026-06-02-ruei-1-1.jpg",
+      "alt": "2026.03 婚禮紀實 01"
+    },
+    {
+      "image": "/assets/2026-06-02-ruei-2.jpg",
+      "alt": "2026.03 婚禮紀實 02"
+    },
+    {
+      "image": "/assets/2026-06-02-ruei-3.jpg",
+      "alt": "2026.03 婚禮紀實 03"
+    },
+    {
+      "image": "/assets/2026-06-02-ruei-4.jpg",
+      "alt": "2026.03 婚禮紀實 04"
+    },
+    {
+      "image": "/assets/2026-06-02-ruei-5.jpg",
+      "alt": "2026.03 婚禮紀實 05"
+    },
+    {
+      "image": "/assets/2026-06-02-ruei-6.jpg",
+      "alt": "2026.03 婚禮紀實 06"
+    },
+    {
+      "image": "/assets/2026-06-02-ruei-7.jpg",
+      "alt": "2026.03 婚禮紀實 07"
+    },
+    {
+      "image": "/assets/2026-06-02-ruei-8.jpg",
+      "alt": "2026.03 婚禮紀實 08"
+    }
+  ]
+}
