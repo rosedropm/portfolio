@@ -23,6 +23,12 @@
       "text": "Notion尚未提供照片輪播的功能，此為可搭配自己cloudinary的倉庫做使用。"
     }
   ],
+  "gallery": [
+    {
+      "image": "/assets/01-365card.jpg",
+      "alt": "365 覺醒卡圖片"
+    }
+  ],
   "links": [
     {
       "title": "蒔花序・365 覺醒卡",
