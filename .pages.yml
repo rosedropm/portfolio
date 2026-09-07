@@ -454,6 +454,69 @@
               "summary": "{title}"
             }
           }
+        },
+        {
+          "name": "videos",
+          "label": "YouTube 影片（可直接貼 Shorts 網址）",
+          "type": "object",
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{title}"
+            }
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "影片標題",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "url",
+              "label": "YouTube 網址",
+              "type": "string",
+              "required": true,
+              "description": "貼上 https://www.youtube.com/shorts/影片ID、watch?v=影片ID 或 youtu.be 短網址；不需貼 iframe。"
+            },
+            {
+              "name": "orientation",
+              "label": "影片比例",
+              "type": "select",
+              "options": {
+                "values": [
+                  {
+                    "name": "portrait",
+                    "label": "直式 9:16（Shorts）"
+                  },
+                  {
+                    "name": "landscape",
+                    "label": "橫式 16:9"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "channel",
+              "label": "發布頻道（選填）",
+              "type": "string"
+            },
+            {
+              "name": "duration",
+              "label": "片長（選填，例如 30 秒）",
+              "type": "string"
+            },
+            {
+              "name": "role",
+              "label": "這支影片的個人分工（選填）",
+              "type": "string"
+            },
+            {
+              "name": "description",
+              "label": "影片說明（選填）",
+              "type": "text"
+            }
+          ]
         }
       ]
     },
@@ -659,6 +722,69 @@
               "summary": "{title}"
             }
           }
+        },
+        {
+          "name": "videos",
+          "label": "YouTube 影片（可直接貼 Shorts 網址）",
+          "type": "object",
+          "list": {
+            "collapsible": {
+              "collapsed": true,
+              "summary": "{title}"
+            }
+          },
+          "fields": [
+            {
+              "name": "title",
+              "label": "影片標題",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "url",
+              "label": "YouTube 網址",
+              "type": "string",
+              "required": true,
+              "description": "貼上 https://www.youtube.com/shorts/影片ID、watch?v=影片ID 或 youtu.be 短網址；不需貼 iframe。"
+            },
+            {
+              "name": "orientation",
+              "label": "影片比例",
+              "type": "select",
+              "options": {
+                "values": [
+                  {
+                    "name": "portrait",
+                    "label": "直式 9:16（Shorts）"
+                  },
+                  {
+                    "name": "landscape",
+                    "label": "橫式 16:9"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "channel",
+              "label": "發布頻道（選填）",
+              "type": "string"
+            },
+            {
+              "name": "duration",
+              "label": "片長（選填，例如 30 秒）",
+              "type": "string"
+            },
+            {
+              "name": "role",
+              "label": "這支影片的個人分工（選填）",
+              "type": "string"
+            },
+            {
+              "name": "description",
+              "label": "影片說明（選填）",
+              "type": "text"
+            }
+          ]
         }
       ]
     },

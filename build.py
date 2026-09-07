@@ -1,7 +1,7 @@
 """Build the portfolio with Python 3.11+ and no third-party dependencies."""
 import argparse, html, json, os, re, shutil
 from pathlib import Path
-from urllib.parse import urlsplit, quote
+from urllib.parse import urlsplit, quote, parse_qs
 
 ROOT = Path(__file__).resolve().parent
 parser = argparse.ArgumentParser()
@@ -122,6 +122,41 @@ def gallery(items,prefix,photo=False):
         figures.append(f'<figure><a class="zoom-image" href="{source}" data-caption="{E(caption)}" aria-label="放大：{E(p.get("alt") or caption)}">{image(p["image"],p.get("alt") or caption,prefix)}<span class="zoom-label" aria-hidden="true">放大 ↗</span></a><figcaption>{E(caption)}</figcaption></figure>')
     return '<div class="gallery '+('photo-gallery' if photo else 'artifact-gallery')+'">'+''.join(figures)+'</div>'
 
+def youtube_id(url):
+    u = urlsplit((url or '').strip())
+    host = (u.hostname or '').lower()
+    if u.scheme != 'https' or u.username or u.password or u.port not in (None, 443):
+        raise ValueError('YouTube 影片網址必須使用 https://')
+    parts = u.path.strip('/').split('/')
+    if host in ('youtu.be', 'www.youtu.be') and len(parts) == 1:
+        video_id = parts[0]
+    elif host in ('youtube.com', 'www.youtube.com', 'm.youtube.com', 'youtube-nocookie.com', 'www.youtube-nocookie.com'):
+        if len(parts) == 2 and parts[0] in ('shorts', 'embed', 'live'):
+            video_id = parts[1]
+        elif u.path == '/watch':
+            video_id = parse_qs(u.query).get('v', [''])[0]
+        else:
+            video_id = ''
+    else:
+        video_id = ''
+    if not re.fullmatch(r'[A-Za-z0-9_-]{11}', video_id):
+        raise ValueError('請貼上有效的 YouTube Shorts、watch 或 youtu.be 影片網址。')
+    return video_id
+
+def video_gallery(videos):
+    cards = []
+    for video in videos:
+        vid = youtube_id(video.get('url'))
+        title = video.get('title') or 'YouTube 影片'
+        shape = video.get('orientation') or 'portrait'
+        if shape not in ('portrait', 'landscape'):
+            raise ValueError('影片比例須為 portrait 或 landscape')
+        embed = f'https://www.youtube-nocookie.com/embed/{vid}?autoplay=0&playsinline=1&controls=1&rel=0'
+        meta = ' · '.join(str(video.get(k)) for k in ('channel','duration') if video.get(k))
+        role = f'<p class="video-role">我的分工：{E(video["role"])}</p>' if video.get('role') else ''
+        cards.append(f'''<article class="video-item"><div class="video-frame {shape}"><iframe src="{E(embed)}" title="{E(title)}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen; web-share" allowfullscreen></iframe></div><div class="video-description"><p class="eyebrow">YOUTUBE / {E(meta)}</p><h3>{E(title)}</h3>{role}{paragraphs(video.get('description'))}<a class="text-link" href="https://www.youtube.com/watch?v={vid}" target="_blank" rel="noopener noreferrer">前往 YouTube 觀看 ↗<span class="sr-only">（另開分頁）</span></a><p class="video-fallback">若播放器無法載入，請使用上方連結觀看原片。</p></div></article>''')
+    return '<section class="wrap video-section"><div class="section-head"><div><p class="eyebrow">SELECTED FILMS</p><h2>精選影片。</h2></div></div><div class="video-list">' + ''.join(cards) + '</div></section>'
+
 def detail(item,group):
     prefix='../../'
     labels={'projects':'專案案例','works':'內容作品','photography':'攝影'}
@@ -131,8 +166,10 @@ def detail(item,group):
         intro+=f'<aside class="result-band wrap"><strong>{E(item["metric"])}</strong><div><h2>{E(item["metric_label"])}</h2><p>{E(item.get("metric_note"))}</p></div></aside>'
     if item.get('cover') and not isphoto:
         intro+=f'<figure class="detail-cover wrap">{image(item["cover"],item.get("cover_alt") or item["short_title"],prefix,True)}</figure>'
-    elif item.get('quote'):
+    elif item.get('quote') and not item.get('videos'):
         intro+=f'<blockquote class="work-quote wrap"><p>{E(item["quote"]).replace(chr(10),"<br>")}</p></blockquote>'
+    if item.get('videos'):
+        intro += video_gallery(item['videos'])
     sections=item.get('sections') or []
     toc=''.join(f'<a href="#section-{i}">{i+1:02} {E(s["title"])}</a>' for i,s in enumerate(sections))
     writing=''.join(f'<section id="section-{i}" class="story-section"><span class="eyebrow">{i+1:02}</span><h2>{E(s["title"])}</h2>{paragraphs(s.get("text"))}</section>' for i,s in enumerate(sections))
@@ -196,3 +233,4 @@ for old in previous_files:
         if OUT in candidate.parents and candidate.is_file(): candidate.unlink()
 manifest_path.write_text(json.dumps(sorted(generated)), encoding='utf-8')
 print(f'Built {len(routes)+1} HTML pages and {len(assets)} assets into {OUT.name}.')
+
