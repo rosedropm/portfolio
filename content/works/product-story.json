@@ -1,11 +1,14 @@
 {
   "slug": "product-story",
-  "title": "從產品資訊，到消費者的買點",
   "short_title": "商品文案與銷售頁企劃",
-  "category": "文字文案",
-  "role": "商品文案 × 內容企劃",
-  "period": "品牌職務作品",
+  "title": "從產品資訊，到消費者的買點",
   "summary": "研讀產品資料，整理成消費者可理解的賣點，延伸至銷售頁與募資專案內容。",
+  "category": "文字文案",
+  "published": true,
+  "order": 7,
+  "featured": false,
+  "period": "品牌職務作品",
+  "role": "商品文案 × 內容企劃",
   "cover": "/assets/images/brand-11.webp",
   "cover_alt": "COSGRAM 仙女套組商品內容作品",
   "sections": [
@@ -25,14 +28,11 @@
       "caption": "募資專案｜商品文案與內容企劃"
     }
   ],
+  "collaboration": "主責商品文案與內容企劃；電商銷售頁與設計夥伴協作。",
   "links": [
     {
       "title": "COSGRAM 公開影片",
       "url": "https://www.facebook.com/reel/668704365500755/"
     }
-  ],
-  "collaboration": "主責商品文案與內容企劃；電商銷售頁與設計夥伴協作。",
-  "order": 5,
-  "featured": false,
-  "published": true
+  ]
 }
