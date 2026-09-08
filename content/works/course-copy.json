@@ -1,21 +1,33 @@
 {
   "slug": "course-copy",
-  "title": "讓專業課程與受眾產生連結",
   "short_title": "課程與商業思維文案",
-  "category": "文字文案",
-  "role": "社群文案撰寫",
-  "period": "品牌職務作品",
+  "title": "讓專業課程與受眾產生連結",
   "summary": "從皮膚管理研討會到經營管理課程，依不同受眾情境調整溝通重點。",
-  "cover": "",
-  "cover_alt": "",
-  "quote": "明明很努力，\n為什麼事情總做不完？",
-  "sections": [
+  "category": "文字文案",
+  "published": true,
+  "order": 4,
+  "featured": false,
+  "period": "品牌職務作品",
+  "role": "社群文案撰寫",
+  "quote": "皮膚管理教學課程",
+  "blocks": [
     {
-      "title": "主題與作品",
-      "text": "皮膚管理研討會｜介紹指南、持續賦能、精準學習、領航未來、致勝關鍵。\n\n商業思維課程｜經營與行銷的不同、明明很努力為什麼事情總做不完、一人工作室也適用的 SOP、成本上升怎麼辦。"
+      "title": "韓國鍍金遊戲系列",
+      "text": "跟著創辦人一起前往韓國，以單眼相機拍攝課程記錄、手機蒐集短影片用素材。\n\n\n\n[韓國鍍金遊學 Day1　課程培訓](https://www.instagram.com/p/CwUYZW_PJLQ/)\n\n[韓國鍍金遊學 Day2-1　工廠參訪](https://www.instagram.com/p/CwXCwp5vU1s/)\n\n[韓國鍍金遊學 Day2-2　課程培訓](https://www.instagram.com/p/Cwe1Xr9vkUx/)\n\n[韓國鍍金遊學 Day3-1　整外篇](https://www.instagram.com/p/CxF0ryEsx9b/)\n\n[韓國鍍金遊學 Day3-2　大學篇](https://www.instagram.com/p/CxInNbtMxuQ/)\n\n",
+      "image": "/assets/images/bs-kr1.jpg",
+      "caption": "貼文封面標準字由設計執行，照片、影片由我拍攝",
+      "video_url": "https://www.youtube.com/watch?v=v-pxclKV_5w",
+      "orientation": "portrait"
     }
   ],
-  "gallery": [],
+  "sections": [
+    {
+      "title": "皮膚管理研討會圖文作品",
+      "text": "攝影、文案、貼文製作皆是由我一人完成\n\n[第08梯：贏得先機](https://www.instagram.com/p/C0-_YcArmHR/)\n\n[第09梯：致勝關鍵](https://www.instagram.com/p/C6gFgXULHvD/)\n\n[第10梯：領航未來](https://www.instagram.com/p/C-Zd3F3sD9T/)\n\n[第11梯：精準學習](https://www.instagram.com/p/DBbALknTzqT/)\n\n[第12梯：持續賦能](https://www.instagram.com/p/DEmPj5JvALa/)\n"
+    }
+  ],
+  "collaboration": "主責觀點判斷、品牌語氣、文字改寫與定稿；依原文案頁所述，AI 協助主題發散與架構討論。",
+  "note": "此頁收錄主題介紹與原貼文標題，完整文案請見原貼文。",
   "links": [
     {
       "title": "皮膚管理研討會｜介紹指南",
@@ -33,10 +45,5 @@
       "title": "成本上升怎麼辦",
       "url": "https://www.instagram.com/p/C8_zEWpMhfD/"
     }
-  ],
-  "collaboration": "主責觀點判斷、品牌語氣、文字改寫與定稿；依原文案頁所述，AI 協助主題發散與架構討論。",
-  "note": "此頁收錄主題介紹與原貼文標題，完整文案請見原貼文。",
-  "order": 4,
-  "featured": false,
-  "published": true
+  ]
 }
