@@ -91,13 +91,36 @@ def external(url):
 
 def arrow(): return '<span aria-hidden="true">↗</span>'
 
+def navigation_links():
+    config_path = ROOT / 'content/navigation.json'
+    entries = json.loads(config_path.read_text(encoding='utf-8')).get('links', []) if config_path.exists() else []
+    result = []
+    for entry in entries:
+        if entry.get('visible', True) is False:
+            continue
+        title = str(entry.get('title') or '').strip()
+        url = str(entry.get('url') or '').strip()
+        if not title or not url:
+            continue
+        u = urlsplit(url)
+        if (u.scheme not in ('https', 'http') or not u.hostname or u.username or u.password
+                or any(c.isspace() or ord(c) < 32 for c in url)):
+            raise ValueError('導覽列外部連結請使用完整的 http:// 或 https:// 公開網址。')
+        u.port
+        attrs = ' target="_blank" rel="noopener noreferrer"' if entry.get('new_tab', True) else ''
+        hint = '<span class="sr-only">（另開分頁）</span>' if entry.get('new_tab', True) else ''
+        result.append(f'<a class="nav-external" href="{E(url)}"{attrs}>{E(title)}{hint}</a>')
+    return ''.join(result)
+
+external_navigation = navigation_links()
+
 def nav(prefix, active):
     links = [('index.html','首頁','home'),('projects/index.html','專案案例','projects'),('works/index.html','內容作品','works'),('photography/index.html','攝影','photography'),('about/index.html','關於我','about')]
     items = ''.join(f'<a href="{prefix}{url}"'+(' aria-current="page"' if active == key else '')+f'>{label}</a>' for url,label,key in links)
     return f'''<a class="skip" href="#main">跳到主要內容</a><header class="site-header"><div class="header-inner">
     <a class="wordmark" href="{prefix}index.html" aria-label="{E(site['name'])} 首頁">{E(site['name'])}<span class="brand-star" aria-hidden="true">❊</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">選單 <span aria-hidden="true">＋</span></button>
-    <nav id="main-nav" aria-label="主選單">{items}<a class="nav-contact" href="{prefix}about/index.html#contact">聯絡我 {arrow()}</a></nav></div></header>'''
+    <nav id="main-nav" aria-label="主選單">{items}{external_navigation}<a class="nav-contact" href="{prefix}about/index.html#contact">聯絡我 {arrow()}</a></nav></div></header>'''
 
 def footer(prefix):
     return f'''<footer class="site-footer"><div><a class="wordmark" href="{prefix}index.html">{E(site['name'])}<span class="brand-star" aria-hidden="true">❊</span></a><p>{E(site['tagline'])}</p></div><div class="footer-right"><a href="mailto:{E(site['email'])}">{E(site['email'])} {arrow()}</a><p>{E(site['location'])} · <a href="{prefix}sitemap.html">網站地圖</a></p><small>作品依各專案標示個人負責範圍與協作分工。</small></div></footer>'''
@@ -279,6 +302,7 @@ for old in previous_files:
         if OUT in candidate.parents and candidate.is_file(): candidate.unlink()
 manifest_path.write_text(json.dumps(sorted(generated)), encoding='utf-8')
 print(f'Built {len(routes)+1} HTML pages and {len(assets)} assets into {OUT.name}.')
+
 
 
 

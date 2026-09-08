@@ -80,6 +80,48 @@
       ]
     },
     {
+      "name": "navigation",
+      "label": "導覽列外部連結",
+      "type": "file",
+      "path": "content/navigation.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "links",
+          "label": "外部連結（可排序）",
+          "type": "object",
+          "list": true,
+          "description": "顯示在關於我與聯絡我之間，不加箭頭。建議保留 1–2 個主要入口；依列表順序顯示。",
+          "fields": [
+            {
+              "name": "title",
+              "label": "顯示名稱",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "url",
+              "label": "完整公開網址",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "visible",
+              "label": "顯示連結",
+              "type": "boolean",
+              "default": true
+            },
+            {
+              "name": "new_tab",
+              "label": "另開分頁",
+              "type": "boolean",
+              "default": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "home",
       "label": "首頁與分類頁文字",
       "type": "file",
