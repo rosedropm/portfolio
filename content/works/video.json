@@ -1,0 +1,28 @@
+{
+  "slug": "video",
+  "short_title": "鏡頭前的表達",
+  "title": "鏡頭前的表達｜Youtube橫式影片",
+  "summary": "我從開箱影片起家，面對鏡頭不怕生。\n協助過幾場直播（生活小物、健身服飾銷售）",
+  "category": "短影音",
+  "published": true,
+  "featured": false,
+  "role": "企劃、拍抏、剪輯",
+  "blocks": [
+    {
+      "title": "個人作品｜台中悄悄好食司康手作",
+      "video_url": "https://www.youtube.com/watch?v=IZiBWqyzPZk",
+      "orientation": "landscape"
+    },
+    {
+      "title": "小三美日作品｜５款超強消臭洗衣精",
+      "text": "5202次，最多觀看次數。",
+      "video_url": "https://www.youtube.com/watch?v=KoyAhfDcZlY",
+      "orientation": "landscape"
+    },
+    {
+      "title": "小三美日作品集｜KISS眉毛印章",
+      "video_url": "https://www.youtube.com/watch?v=8BsUYpa43zs",
+      "orientation": "landscape"
+    }
+  ]
+}
