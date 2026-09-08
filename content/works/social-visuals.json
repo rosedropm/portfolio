@@ -1,11 +1,14 @@
 {
   "slug": "social-visuals",
-  "title": "讓圖片清楚傳達下一步",
-  "short_title": "社群圖文獨立製作",
-  "category": "社群圖文",
-  "role": "主題規劃 × 圖文製作",
-  "period": "品牌職務作品",
+  "short_title": "美髮沙龍社群圖文製作",
+  "title": "美髮沙龍社群圖文製作｜符合品牌氛圍的活動貼文",
   "summary": "以資訊層級、視覺一致性與行動引導，傳達產品賣點、課程或活動訊息。",
+  "category": "社群圖文",
+  "published": true,
+  "order": 2,
+  "featured": true,
+  "period": "品牌職務作品",
+  "role": "主題規劃 × 圖文製作",
   "cover": "/assets/images/brand-06.webp",
   "cover_alt": "獨立製作的社群宣傳圖文",
   "sections": [
@@ -41,9 +44,5 @@
       "caption": "原作品集標註：獨立製作"
     }
   ],
-  "links": [],
-  "collaboration": "本組依原作品集「社群圖文｜獨立製作」區段整理。",
-  "order": 2,
-  "featured": true,
-  "published": true
+  "collaboration": "本組依原作品集「社群圖文｜獨立製作」區段整理。"
 }
