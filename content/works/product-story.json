@@ -1,31 +1,24 @@
 {
   "slug": "product-story",
   "short_title": "商品文案與銷售頁企劃",
-  "title": "從產品資訊，到消費者的買點",
+  "title": "eDM｜從產品資訊，到消費者的買點",
   "summary": "研讀產品資料，整理成消費者可理解的賣點，延伸至銷售頁與募資專案內容。",
   "category": "文字文案",
   "published": true,
   "order": 7,
   "featured": false,
   "period": "品牌職務作品",
-  "role": "商品文案 × 內容企劃",
-  "cover": "/assets/images/brand-11.webp",
-  "cover_alt": "COSGRAM 仙女套組商品內容作品",
-  "sections": [
+  "role": "內容企劃",
+  "blocks": [
     {
-      "title": "電商銷售頁企劃",
-      "text": "研讀產品簡報，將產品特性寫成消費者可理解的賣點與買點。作品包含德瑪貝爾水光膠原撕拉面膜與玫瑰凝膠軟膜預購頁，並與設計夥伴協作完成頁面呈現。"
+      "title": "電商銷售頁企劃｜與設計協作",
+      "text": "研讀產品簡報，將產品特性寫成消費者可理解的賣點與買點。作品包含德瑪貝爾水光膠原撕拉面膜與玫瑰凝膠軟膜預購頁，並與設計夥伴協作完成頁面呈現。\n\n[【德瑪貝爾】水光膠原撕拉面膜](https://bsgs.easy.co/collections/dermabell/products/dermabell-high-essential-reju-control-melting-mask)\n\n[【德瑪貝爾】玫瑰凝膠軟膜 預購](https://bsgs.easy.co/collections/dermabell/products/dermabell-royal-rose-modeling-pack)"
     },
     {
       "title": "募資商品內容",
-      "text": "COSGRAM 仙女套組募資專案中，參與商品文案與內容企劃。原嘖嘖頁面已下架，本頁保留作品圖與公開貼文連結。"
-    }
-  ],
-  "gallery": [
-    {
-      "image": "/assets/images/brand-11.webp",
-      "alt": "COSGRAM 仙女套組商品內容作品",
-      "caption": "募資專案｜商品文案與內容企劃"
+      "text": "COSGRAM 仙女套組募資專案中，參與商品文案與內容企劃。原嘖嘖頁面已下架，本頁保留作品圖與公開貼文連結。\n\n[貼文連結](https://www.facebook.com/reel/668704365500755/)\n\n[嘖嘖頁面連結-已下架](https://www.zeczec.com/projects/cosgram-fiberpointer-set)",
+      "image": "/assets/images/cosgram.webp",
+      "caption": "此為募資平台後台截圖記錄，僅供參考"
     }
   ],
   "collaboration": "主責商品文案與內容企劃；電商銷售頁與設計夥伴協作。",
