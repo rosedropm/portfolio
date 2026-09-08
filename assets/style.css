@@ -73,3 +73,7 @@ body{font-weight:400}h1,h2,h3,.site-header nav a,.button,.menu-toggle{font-weigh
   margin: 8px 0 0;
 }
 
+
+
+/* Allow additional navigation entries without horizontal overflow. */
+.header-inner{flex-wrap:wrap}.site-header nav{flex-wrap:wrap}.site-header .nav-external{white-space:normal;overflow-wrap:anywhere;max-width:100%}
