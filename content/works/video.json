@@ -5,6 +5,7 @@
   "summary": "我從開箱影片起家，面對鏡頭不怕生。\n協助過幾場直播（生活小物、健身服飾銷售）",
   "category": "短影音",
   "published": true,
+  "order": 5,
   "featured": false,
   "role": "企劃、拍抏、剪輯",
   "blocks": [
