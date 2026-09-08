@@ -1,12 +1,15 @@
 {
   "slug": "brand-social",
-  "title": "品牌社群的內容節奏",
   "short_title": "品牌社群內容規劃",
-  "category": "社群圖文",
-  "role": "內容規劃 × 貼文排程",
-  "period": "品牌職務作品",
+  "title": "品牌社群的內容節奏",
   "summary": "依產品、課程與品牌形象安排主題，讓儷人閣與德瑪貝爾的社群維持一致的溝通脈絡。",
-  "cover": "/assets/images/brand-01.webp",
+  "category": "社群圖文",
+  "published": true,
+  "order": 1,
+  "featured": false,
+  "period": "品牌職務作品",
+  "role": "內容規劃 × 貼文排程",
+  "cover": "/assets/images/brand-04.webp",
   "cover_alt": "儷人閣品牌社群版面",
   "sections": [
     {
@@ -41,6 +44,7 @@
       "caption": "德瑪貝爾"
     }
   ],
+  "collaboration": "主責內容規劃與排程；品牌整體視覺包含與設計夥伴協作的產出。",
   "links": [
     {
       "title": "儷人閣學院 Instagram",
@@ -50,9 +54,5 @@
       "title": "德瑪貝爾 Instagram",
       "url": "https://www.instagram.com/dermabellofficial_tw/"
     }
-  ],
-  "collaboration": "主責內容規劃與排程；品牌整體視覺包含與設計夥伴協作的產出。",
-  "order": 1,
-  "featured": false,
-  "published": true
+  ]
 }
